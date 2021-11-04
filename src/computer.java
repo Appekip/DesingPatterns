@@ -50,7 +50,7 @@ public class computer implements pcComponentIF{
 
         addComponent(newGPU("GPU", "RTX 3070", 900));
         addComponent(newCPU("CPU", "Ryzen 3700x", 400));
-        addComponent(newRam("Ram", "Tricent Z Neo 16GB", 200));
+        addComponent(newRam("Ram", "Trident Z Neo 16GB", 200));
         addComponent(newMB("Motherboard", "Asus X570-Pro", 300, "Wifi Module", 100));
         addComponent(newCase("Case", "Lian Li Pc011 D", 150, "Vertical GPU Bracket", 50));
         print();
