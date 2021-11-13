@@ -1,5 +1,9 @@
 public class pokemon implements pokemonIf{
 
+    boolean fainted = false;
+    int hp;
+    int atk;
+
     public int getHp() {
         return hp;
     }
@@ -8,8 +12,12 @@ public class pokemon implements pokemonIf{
         this.hp = hp;
     }
 
-    int hp;
-    int atk;
+    @Override
+    public void fainted(boolean b) {
+        fainted = b;
+    }
+
+
 
     public String getName() {
         return name;
@@ -48,8 +56,15 @@ public class pokemon implements pokemonIf{
         evolve();
     }
 
+
+
     @Override
-    public void battle(pokemon pkmn1, enemyPKMN pkmn2) {
+    public void revive() {
+
+    }
+
+    @Override
+    public void battle(pokemonIf pkmn1, pokemonIf pkmn2) {
 
         System.out.println("New battle againsts " + pkmn2.getName());
 
@@ -60,8 +75,8 @@ public class pokemon implements pokemonIf{
             }
 
         }
-            System.out.println(pkmn2.getName() + " fainted.");
-            pkmn2.fainted = true;
+        System.out.println(pkmn2.getName() + " fainted.");
+            pkmn2.fainted(true);
             gainXp(9);
 
 

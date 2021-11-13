@@ -5,8 +5,9 @@ public class main {
 
         Scanner scan = new Scanner(System.in);
 ;
-        pokemon starterPKMN = new pokemon();
-        enemyPKMN enemyPKMN = new enemyPKMN(10, 2, "Rattata");
+        pokemonIf starterPKMN = new pokemon();
+
+        pokemonIf enemyPKMN = new enemyPKMN(10, 2, "Rattata");
 
         System.out.println("Press enter to continue to next battle!");
         scan.nextLine();
