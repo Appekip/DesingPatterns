@@ -3,9 +3,14 @@ public class charmeleon implements evolutionIf{
     int atk = 10;
     int hp = 25;
     int xp = 0;
+    int requiredXpToLvl = 30;
 
     public void setXp(int xp) {
         this.xp += xp;
+    }
+
+    public int getXp(){
+        return xp;
     }
 
     public int getHp() {
@@ -22,9 +27,11 @@ public class charmeleon implements evolutionIf{
     @Override
     public void evolve(pokemon pkmn) {
 
-        if (xp > 30){
+        if (xp > requiredXpToLvl){
             pkmn.seteState(new charizard());
+            pkmn.geteState().setXp(xp - requiredXpToLvl);
             System.out.println("Charmeleon evolved into Charizard!" + " New attack is " + new charizard().getAtk() + "!");
+            System.out.println("Current xp is: " + xp);
         }
         else {
             System.out.println("Current xp is: " + xp);

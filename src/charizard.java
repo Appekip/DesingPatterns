@@ -7,6 +7,10 @@ public class charizard implements evolutionIf{
         return hp;
     }
 
+    public int getXp(){
+        return xp;
+    }
+
     @Override
     public int setHp(int a) {
         return hp;
@@ -21,7 +25,7 @@ public class charizard implements evolutionIf{
 
     @Override
     public void evolve(pokemon pkmn) {
-        System.out.println("Charizard's current xp is " + xp);
+        System.out.println(name + "'s current xp is " + xp);
     }
 
     @Override

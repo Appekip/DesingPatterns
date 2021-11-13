@@ -5,4 +5,5 @@ public interface evolutionIf {
     public void setXp(int xp);
     public int getHp();
     public int setHp(int a);
+    public int getXp();
 }

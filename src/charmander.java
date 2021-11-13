@@ -5,9 +5,16 @@ public class charmander implements evolutionIf{
 
     int xp = 0;
 
+    int requiredXpToLvl = 10;
+
+    public int getXp(){
+        return xp;
+    }
+
     public void setXp(int xp) {
         this.xp += xp;
     }
+
 
     public int getHp() {
         return hp;
@@ -23,9 +30,11 @@ public class charmander implements evolutionIf{
     @Override
     public void evolve(pokemon pkmn) {
 
-        if (xp > 10){
+        if (xp > requiredXpToLvl){
             pkmn.seteState(new charmeleon());
+            pkmn.geteState().setXp(xp - requiredXpToLvl);
             System.out.println("Charmander evolved into Charmeleon!" + " New attack is " + new charmeleon().getAtk() + "!");
+            System.out.println("Current xp is: " + pkmn.geteState().getXp());
         }
         else {
             System.out.println("Current xp is: " + xp);
