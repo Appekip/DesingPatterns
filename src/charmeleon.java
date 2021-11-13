@@ -5,6 +5,8 @@ public class charmeleon implements evolutionIf{
     int xp = 0;
     int requiredXpToLvl = 30;
 
+    pkmnMove Ember = new pkmnMove("Ember", 10);
+
     public void setXp(int xp) {
         this.xp += xp;
     }
@@ -30,7 +32,7 @@ public class charmeleon implements evolutionIf{
         if (xp > requiredXpToLvl){
             pkmn.seteState(new charizard());
             pkmn.geteState().setXp(xp - requiredXpToLvl);
-            System.out.println("Charmeleon evolved into Charizard!" + " New attack is " + new charizard().getAtk() + "!");
+            System.out.println("Charmeleon evolved into Charizard!" + " New attack is " + pkmn.geteState().getAtk() + "! Charizard learned a new move, " + pkmn.geteState().move() + "!");
             System.out.println("Current xp is: " + xp);
         }
         else {
@@ -46,6 +48,20 @@ public class charmeleon implements evolutionIf{
     @Override
     public String getName() {
         return name;
+    }
+
+    public int ember(){
+        System.out.println("Ember attack!");
+        return getAtk();
+    }
+
+    public int attack(){
+        return Ember.dmg;
+    }
+
+    @Override
+    public String move() {
+        return Ember.name;
     }
 
 }

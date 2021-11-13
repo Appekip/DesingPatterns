@@ -3,6 +3,8 @@ public class charizard implements evolutionIf{
     int atk = 20;
     int hp = 50;
 
+    pkmnMove Flamethrover = new pkmnMove("Flamethrover", 20);
+
     public int getHp() {
         return hp;
     }
@@ -36,6 +38,21 @@ public class charizard implements evolutionIf{
     @Override
     public String getName() {
         return name;
+    }
+
+    public int flamethrover(){
+        System.out.println("Flamethrover attack!");
+        return getAtk();
+    }
+
+    public int attack(){
+        return Flamethrover.dmg;
+
+    }
+
+    @Override
+    public String move() {
+        return Flamethrover.name;
     }
 
 }

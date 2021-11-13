@@ -46,7 +46,10 @@ public class pokemon implements pokemonIf{
 
     @Override
     public int attack() {
-        System.out.println(eState.getName() + " attacks for " + eState.getAtk() + " damage!");
+        System.out.println(eState.getName() + " attack with " + eState.move() + "!");
+
+        System.out.println(eState.getName() + " deals " + eState.getAtk() + " damage!");
+
         return  eState.getAtk();
     }
 

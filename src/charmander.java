@@ -5,6 +5,8 @@ public class charmander implements evolutionIf{
 
     int xp = 0;
 
+    pkmnMove Scratch = new pkmnMove("Scratch", 5);
+
     int requiredXpToLvl = 10;
 
     public int getXp(){
@@ -33,7 +35,7 @@ public class charmander implements evolutionIf{
         if (xp > requiredXpToLvl){
             pkmn.seteState(new charmeleon());
             pkmn.geteState().setXp(xp - requiredXpToLvl);
-            System.out.println("Charmander evolved into Charmeleon!" + " New attack is " + new charmeleon().getAtk() + "!");
+            System.out.println("Charmander evolved into Charmeleon!" + " New attack is " + pkmn.geteState().getAtk() + "! Charmaleon learned a new move, " + pkmn.geteState().move() + "!");
             System.out.println("Current xp is: " + pkmn.geteState().getXp());
         }
         else {
@@ -51,4 +53,14 @@ public class charmander implements evolutionIf{
     public String getName() {
         return name;
     }
+
+    public int attack(){
+        return Scratch.dmg;
+    }
+
+    public String move(){
+        return Scratch.name;
+    }
 }
+
+

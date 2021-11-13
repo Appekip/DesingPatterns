@@ -6,4 +6,7 @@ public interface evolutionIf {
     public int getHp();
     public int setHp(int a);
     public int getXp();
+    public int attack();
+
+    public String move();
 }
