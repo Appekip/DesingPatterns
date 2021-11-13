@@ -10,14 +10,14 @@ public class main {
         pokemonIf enemyPKMN = new enemyPKMN(10, 2, "Rattata");
 
         System.out.println("Press enter to continue to next battle!");
-        scan.nextLine();
 
         while (true){
 
-            starterPKMN.battle(starterPKMN, enemyPKMN);
-            enemyPKMN.revive();
-
             scan.nextLine();
+
+            starterPKMN.battle(starterPKMN, enemyPKMN);
+
+            enemyPKMN.revive();
 
         }
 
