@@ -17,6 +17,7 @@ public abstract class Game {
         while (!endOfGame()){
             makePlay(j);
             j = (j + 1) % playersCount;
+            endOfGame();
         }
         printWinner();
     }
